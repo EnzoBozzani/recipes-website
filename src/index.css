@@ -1,5 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+    lightGray: #e5e7eb
+    mediumGray: #9ca3af
+    darkGray: #374151
+*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.link-style {
+    color: #151515;
+    border-bottom: 2px solid transparent;
+    transition: 0.5s;
+    padding-bottom: 5px;
+}
+
+.link-style:hover {
+    border-bottom-color: #f97316;
+    color: #374151;
 }
