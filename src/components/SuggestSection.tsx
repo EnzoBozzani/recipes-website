@@ -1,4 +1,5 @@
 import { Recipe } from "../pages/Home"
+import { Link } from "react-router-dom"
 
 interface props {
     recipe: Recipe | undefined
@@ -22,13 +23,12 @@ export const SuggestSection: React.FC<props> = ({ recipe }: props) => {
                 SUGGESTED FOR YOU: <br />
                 <span className='italic text-orange-500'>{recipe?.strMeal}</span>
             </p>
-            <a
-                href={recipe?.strYoutube}
-                target='_blank'
+            <Link
+                to={`/${recipe?.idMeal}`}
                 className="flex justify-center border-black border-2 text-black bg-orange-500 ms-4 w-48 sm:ms-16 mt-16 px-4 py-2 rounded hover:bg-orange-600 cursor-pointer"
             >
-                Check it in Youtube
-            </a>
+                Check it
+            </Link>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 className="mt-32 w-12 h-12 mx-auto"
             >

@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { RootLayout } from "./components";
-import { Home } from "./pages";
+import { Home, RecipePage, SearchByFirstLetter, SearchByIngredient, SearchByName } from "./pages";
 
 
 const router = createBrowserRouter([
@@ -11,6 +11,22 @@ const router = createBrowserRouter([
             {
                 index: true,
                 element: <Home />
+            },
+            {
+                path: '/:recipeId',
+                element: <RecipePage />
+            },
+            {
+                path: 'searchByName',
+                element: <SearchByName />
+            },
+            {
+                path: 'searchByFirstLetter',
+                element: <SearchByFirstLetter />
+            },
+            {
+                path: 'searchByIngredient',
+                element: <SearchByIngredient />
             }
         ]
     }

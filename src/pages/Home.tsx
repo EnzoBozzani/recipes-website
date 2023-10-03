@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { recipesService } from "../services/recipesService";
 import { Loader, SuggestSection, MealsSection } from "../components";
 export interface Recipe {
+    idMeal: string;
     strMeal: string;
     strInstructions: string;
     strMealThumb: string;
@@ -36,7 +37,7 @@ export const Home: React.FC = () => {
     return (
         <main className='bg-gray-100 w-full'>
             {!isLoading ? <SuggestSection recipe={recipes[0]} /> : null}
-            <MealsSection recipes={recipes} />
+            <MealsSection recipes={recipes} title={'Random Recipes'} />
         </main>
     )
 }
