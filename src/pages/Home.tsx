@@ -7,6 +7,9 @@ export interface Recipe {
     strInstructions: string;
     strMealThumb: string;
     strYoutube: string;
+    strIngredient1: string;
+    strIngredient2: string;
+    strIngredient3: string;
 }
 
 export const Home: React.FC = () => {

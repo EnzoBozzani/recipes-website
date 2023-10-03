@@ -20,7 +20,7 @@ export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
             </p>
             <p className='px-4 mb-4'>
                 {recipe.strInstructions.slice(0, 60)}...
-                <Link to={`/${recipe.idMeal}`} className='text-gray-500 italic'>Click to see more</Link>
+                <Link to={`/${recipe.idMeal}`} className='text-gray-500 italic underline'>Click here to see more</Link>
             </p>
             <a
                 className='border-black bg-orange-500 mx-auto mb-4 text-gray-100 px-4 py-2 rounded hover:bg-orange-600 cursor-pointer'

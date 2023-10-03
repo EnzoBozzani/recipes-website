@@ -17,7 +17,7 @@ export const SuggestSection: React.FC<props> = ({ recipe }: props) => {
             }}
         >
             <p
-                className='text-bold text-2xl sm:text-4xl md:text-6xl ms-4 sm:ms-16 mt-16'
+                className='font-bold text-2xl sm:text-4xl md:text-6xl ms-4 sm:ms-16 mt-16'
                 style={{ WebkitTextStroke: '1px #000' }}
             >
                 SUGGESTED FOR YOU: <br />
@@ -25,7 +25,7 @@ export const SuggestSection: React.FC<props> = ({ recipe }: props) => {
             </p>
             <Link
                 to={`/${recipe?.idMeal}`}
-                className="flex justify-center border-black border-2 text-black bg-orange-500 ms-4 w-48 sm:ms-16 mt-16 px-4 py-2 rounded hover:bg-orange-600 cursor-pointer"
+                className="flex justify-center border-black border-2 text-black bg-orange-500 ms-4 w-48 sm:ms-16 mt-16 px-2 py-1 sm:px-4 sm:py-2 rounded hover:bg-orange-600 cursor-pointer"
             >
                 Check it
             </Link>
