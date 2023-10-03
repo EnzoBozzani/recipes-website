@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { recipesService } from "../services/recipesService";
-import { RecipeCard } from "../components/RecipeCard";
+import { Loader, SuggestSection, MealsSection } from "../components";
 export interface Recipe {
     strMeal: string;
     strInstructions: string;
@@ -9,28 +9,34 @@ export interface Recipe {
 }
 
 export const Home: React.FC = () => {
-    const [recipes, setRecipes] = useState<Recipe[]>();
+    const [recipes, setRecipes] = useState<Recipe[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const fetchData = async () => {
-        const res = await recipesService.getRandomRecipe();
-        const recipe = res.meals[0];
-        const test = [];
-        for (let i = 0; i < 9; i++) {
-            test.push(recipe);
+        setIsLoading(true);
+        const recipesList = [];
+        for (let i = 0; i < 7; i++) {
+            const res = await recipesService.getRandomRecipe();
+            const recipe = res.meals[0];
+            recipesList.push(recipe);
         }
-        setRecipes(test);
+        setRecipes(recipesList);
+        setIsLoading(false);
     }
 
     useEffect(() => {
         fetchData();
     }, []);
 
+    if (isLoading) {
+        return <Loader />
+    }
+
 
     return (
         <main className='bg-gray-100 w-full'>
-            <section className='max-w-[1200px] mx-auto flex justify-center flex-wrap gap-8 pt-8'>
-                {recipes?.map((recipe: Recipe, index: number) => <RecipeCard key={index} recipe={recipe} />)}
-            </section>
+            {!isLoading ? <SuggestSection recipe={recipes[0]} /> : null}
+            <MealsSection recipes={recipes} />
         </main>
     )
 }
