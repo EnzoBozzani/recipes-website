@@ -5,6 +5,7 @@ import { Loader } from "./Loader";
 import { SuggestSection } from "./SuggestSection";
 import { MealsSection } from "./Meals";
 import { Form } from "./Input";
+import { Letters } from "./Letters";
 
 export {
     RootLayout,
@@ -13,5 +14,6 @@ export {
     Loader,
     SuggestSection,
     MealsSection,
-    Form
+    Form,
+    Letters
 }

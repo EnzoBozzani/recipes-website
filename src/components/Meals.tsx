@@ -17,7 +17,7 @@ export const MealsSection: React.FC<props> = ({ recipes, title, children }: prop
                 recipes ?
                     recipes?.map((recipe: Recipe, index: number) => index !== 0 ? <RecipeCard key={index} recipe={recipe} /> : null)
                     :
-                    <p>Receitas não encontradas</p>
+                    <p className='text-black font-bold text-xl mt-32'>Receitas não encontradas</p>
             }
         </section>
     )

@@ -1,11 +1,11 @@
 interface props {
-    value: any;
-    setValue: any;
+    value?: any;
+    setValue?: any;
     placeholder: string;
-    handleKeyPress: any;
+    handleFunction: any;
 }
 
-export const Form: React.FC<props> = ({ value, setValue, placeholder, handleKeyPress }: props) => {
+export const Form: React.FC<props> = ({ value, setValue, placeholder, handleFunction }: props) => {
 
     return (
         <input
@@ -14,7 +14,7 @@ export const Form: React.FC<props> = ({ value, setValue, placeholder, handleKeyP
             placeholder={placeholder}
             value={value}
             onChange={(ev) => setValue(ev.target.value)}
-            onKeyDown={(ev) => handleKeyPress(value, ev)}
+            onKeyDown={(ev) => handleFunction(value, ev)}
         />
     )
 }

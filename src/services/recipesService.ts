@@ -21,5 +21,13 @@ export const recipesService = {
         const res = await fetch(`https://themealdb.com/api/json/v1/1/search.php?s=${name}`)
             .then(response => response.json());
         return res;
+    },
+
+    getRecipesByFirstLetter: async (firstLetter: string) => {
+        const res = await fetch(`https://themealdb.com/api/json/v1/1/search.php?f=${firstLetter}`)
+            .then(response => response.json());
+
+        return res;
+
     }
 }

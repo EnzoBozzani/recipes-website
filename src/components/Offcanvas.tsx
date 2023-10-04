@@ -9,14 +9,17 @@ export const Offcanvas: React.FC<props> = ({ setIsOpen }: props) => {
         <>
             <nav className='min-h-screen flex flex-col items-center w-full pt-32 text-xl gap-8'>
                 <Link
+                    onClick={() => setIsOpen(false)}
                     to='/searchByName'
                     className='text-orange-500'
                 >Search Recipes</Link>
                 <Link
+                    onClick={() => setIsOpen(false)}
                     to='/searchByFirstLetter'
                     className='text-orange-500'
                 >Recipes by First Letter</Link>
                 <Link
+                    onClick={() => setIsOpen(false)}
                     to='/searchByIngredient'
                     className='text-orange-500'
                 >Recipes by Ingredient</Link>
