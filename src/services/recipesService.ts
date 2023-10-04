@@ -15,5 +15,11 @@ export const recipesService = {
         const res = await fetch('https://themealdb.com/api/json/v1/1/list.php?i=list')
             .then(response => response.json());
         return res;
+    },
+
+    getRecipeByName: async (name: string) => {
+        const res = await fetch(`https://themealdb.com/api/json/v1/1/search.php?s=${name}`)
+            .then(response => response.json());
+        return res;
     }
 }
