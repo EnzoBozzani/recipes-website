@@ -26,7 +26,7 @@ export const MealsSection: React.FC<props> = ({ recipes, title, children, ignore
     }
 
     return (
-        <section className='max-w-[1200px] mx-auto flex justify-center flex-wrap gap-8 pt-8'>
+        <section className='max-w-[1200px] mx-auto flex justify-center flex-wrap gap-8 pt-4'>
             <p className='w-full ps-6 text-3xl md:ps-32 sm:text-4xl text-orange-500 font-bold'>{title}</p>
             {children}
             {

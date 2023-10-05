@@ -23,6 +23,14 @@ export const SearchByIngredient: React.FC = () => {
     if (recipes) {
         return (
             <main className={`bg-gray-100 w-full`}>
+                <div className="max-w-[1200px] mx-auto mt-2">
+                    <button
+                        className='ms-6 md:ms-32 rounded px-4 py-1 border-2 border-black bg-orange-500 shadow'
+                        onClick={() => setRecipes(undefined)}
+                    >
+                        Voltar
+                    </button>
+                </div>
                 <MealsSection
                     title={`Meals with ${ingredient}`}
                     recipes={recipes}
