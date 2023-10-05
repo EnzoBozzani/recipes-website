@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { Offcanvas } from "./Offcanvas";
 import useScreenWidth from "../hooks/useScreenWidth";
-import { useState } from "react";
 
-export const Header: React.FC = () => {
+interface props {
+    isOpen: boolean;
+    setIsOpen: any;
+}
+
+export const Header: React.FC<props> = ({ isOpen, setIsOpen }: props) => {
     const width = useScreenWidth();
-    const [isOpen, setIsOpen] = useState(false);
     const handleClick = () => {
         setIsOpen(!isOpen);
     }

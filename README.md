@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+<h1>Recipes Website</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Project Status: Finished (October 5, 2023)
 
-Currently, two official plugins are available:
+### Topics
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+:small_blue_diamond: [Project Description](#project-description)
 
-## Expanding the ESLint configuration
+:small_blue_diamond: [Features](#features)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+:small_blue_diamond: [Dependencies](#dependencies)
 
-- Configure the top-level `parserOptions` property like this:
+:small_blue_diamond: [Run App](#run-application)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+## Project Description
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<p align="justify">
+  Recipes website that consumes <a href='https://www.themealdb.com/api.php' target='_blank'>TheMealDB</a>. It has 5 essential pages: Home (1 main suggested meal and 6 other random meals), Search Meal by Name, Search Meal By First Letter, Search Meal by Ingredients and Meals Specific Page (containing ingredients, measures and how to prepare it). Built using TypeScript, React, Vite and TalwindCSS.
+</p>
+
+## Features
+
+:heavy_check_mark: Search meals by name, first letter and ingredients.
+
+## Dependencies
+
+:warning: Node
+<br>
+:warning: TypeScript
+<br>
+:warning: TailwindCSS
+<br>
+:warning: React
+<br>
+:warning: Vite
+
+## Run application
+
+You can access this project through this link: [https://recipes-website-enzobozzani.netlify.app](https://recipes-website-enzobozzani.netlify.app)
