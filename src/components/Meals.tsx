@@ -19,7 +19,7 @@ export const MealsSection: React.FC<props> = ({ recipes, title, children, ignore
                     recipes ?
                         recipes?.map((recipe: Recipe, index: number) => index !== 0 ? <RecipeCard key={index} recipe={recipe} /> : null)
                         :
-                        <p className='text-black font-bold text-xl mt-32'>Receitas não encontradas</p>
+                        <p className='text-black font-bold text-xl mt-32'>No recipes found</p>
                 }
             </section>
         )
@@ -33,7 +33,7 @@ export const MealsSection: React.FC<props> = ({ recipes, title, children, ignore
                 recipes ?
                     recipes?.map((recipe: Recipe, index: number) => <RecipeCard key={index} recipe={recipe} />)
                     :
-                    <p className='text-black font-bold text-xl mt-32'>Receitas não encontradas</p>
+                    <p className='text-black font-bold text-xl mt-32'>No recipes found</p>
             }
         </section>
     )

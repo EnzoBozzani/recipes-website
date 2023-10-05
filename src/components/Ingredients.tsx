@@ -49,7 +49,7 @@ export const Ingredients: React.FC<props> = ({ handleClick }: props) => {
             {
                 ingredients.length === 0 ?
                     <p className='text-black font-bold text-xl mt-32 mx-auto'>
-                        Nenhum ingrediente encontrado
+                        No ingredients found
                     </p>
                     :
                     <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -28,7 +28,7 @@ export const SearchByIngredient: React.FC = () => {
                         className='ms-6 md:ms-32 rounded px-4 py-1 border-2 border-black bg-orange-500 shadow'
                         onClick={() => setRecipes(undefined)}
                     >
-                        Voltar
+                        Return
                     </button>
                 </div>
                 <MealsSection
