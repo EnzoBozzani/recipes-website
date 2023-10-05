@@ -24,7 +24,6 @@ export const RecipePage: React.FC = () => {
         return <Loader />;
     }
 
-    console.log(recipe);
 
     return (
         <>

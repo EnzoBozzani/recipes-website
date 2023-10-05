@@ -7,15 +7,16 @@ interface props {
 
 export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
     return (
-        <Link
-            to={`/${recipe.idMeal}`}
+        <div
             className='flex flex-col justify-between w-full mx-8 md:mx-0 md:w-1/4 rounded-md hover:scale-105 hover:border-2   
             hover:border-orange-500 hover:border-solid transition duration-500 bg-white'>
-            <img
-                src={recipe.strMealThumb}
-                alt={recipe.strMeal}
-                className='rounded-t object-cover h-48 w-full'
-            />
+            <Link to={`/${recipe.idMeal}`}>
+                <img
+                    src={recipe.strMealThumb}
+                    alt={recipe.strMeal}
+                    className='rounded-t object-cover h-48 w-full'
+                />
+            </Link>
             <p className={`px-4 text-lg font-bold mt-4 ${recipe.strInstructions ? null : 'mb-6'}`}>
                 {recipe.strMeal}
             </p>
@@ -23,7 +24,7 @@ export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
                 recipe.strInstructions ?
                     <p className='px-4 mb-4'>
                         {recipe.strInstructions.slice(0, 60)}...
-                        <span className='text-gray-500 italic'>Click here to see more</span>
+                        <Link to={`/${recipe.idMeal}`} className='text-gray-500 italic'>Click here to see more</Link>
                     </p>
                     : null
             }
@@ -34,6 +35,6 @@ export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
             >
                 Recipe in YouTube
             </a>
-        </Link>
+        </div>
     )
 }
