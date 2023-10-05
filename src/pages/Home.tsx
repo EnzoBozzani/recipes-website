@@ -40,7 +40,11 @@ export const Home: React.FC = () => {
     return (
         <main className='bg-gray-100 w-full'>
             {!isLoading ? <SuggestSection recipe={recipes[0]} /> : null}
-            <MealsSection recipes={recipes} title={'Random Recipes'} />
+            <MealsSection
+                recipes={recipes}
+                title='Some Random Meals'
+                ignoreFirst
+            />
         </main>
     )
 }

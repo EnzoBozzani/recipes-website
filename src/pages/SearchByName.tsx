@@ -29,7 +29,7 @@ export const SearchByName: React.FC = () => {
     return (
         <main className={`bg-gray-100 w-full`}>
             <MealsSection
-                title='Search by name'
+                title='Search Meals by Name'
                 recipes={recipes}>
                 <Form
                     value={name}

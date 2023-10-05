@@ -10,7 +10,7 @@ export const SearchByFirstLetter: React.FC = () => {
     const handleClick = async (firstLetter: string) => {
         setIsLoading(true);
         const res = await recipesService.getRecipesByFirstLetter(firstLetter);
-        setRecipes(() => res.meals.length === 0 ? undefined : res.meals);
+        setRecipes(res.meals);
         setIsLoading(false);
     }
 
@@ -21,7 +21,7 @@ export const SearchByFirstLetter: React.FC = () => {
     return (
         <main className={`bg-gray-100 w-full`}>
             <MealsSection
-                title='Search by FirstLetter'
+                title='Search Meals by First Letter'
                 recipes={recipes}
             >
                 <Letters handleClick={handleClick} />

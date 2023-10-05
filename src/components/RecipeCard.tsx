@@ -8,7 +8,7 @@ interface props {
 export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
     return (
         <div
-            className='flex flex-col w-full mx-8 md:mx-0 md:w-1/4 rounded-md hover:scale-105 hover:border-2   
+            className='flex flex-col justify-between w-full mx-8 md:mx-0 md:w-1/4 rounded-md hover:scale-105 hover:border-2   
             hover:border-orange-500 hover:border-solid transition duration-500 bg-white'>
             <img
                 src={recipe.strMealThumb}
