@@ -6,6 +6,7 @@ import { SuggestSection } from "./SuggestSection";
 import { MealsSection } from "./Meals";
 import { Form } from "./Input";
 import { Letters } from "./Letters";
+import { Ingredients } from "./Ingredients";
 
 export {
     RootLayout,
@@ -15,5 +16,6 @@ export {
     SuggestSection,
     MealsSection,
     Form,
-    Letters
+    Letters,
+    Ingredients
 }

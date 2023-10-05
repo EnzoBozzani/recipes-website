@@ -54,6 +54,7 @@ export const Header: React.FC = () => {
                 >Recipes by First Letter</Link>
                 <Link
                     to='/searchByIngredient'
+                    reloadDocument
                     className='link-style'
                 >Recipes by Ingredient</Link>
             </nav>

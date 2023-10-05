@@ -28,6 +28,11 @@ export const recipesService = {
             .then(response => response.json());
 
         return res;
+    },
 
+    getRecipeByIngredient: async (ingredient: string) => {
+        const res = await fetch(`https://themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`)
+            .then(response => response.json());
+        return res;
     }
 }

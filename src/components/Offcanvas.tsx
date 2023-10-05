@@ -21,6 +21,7 @@ export const Offcanvas: React.FC<props> = ({ setIsOpen }: props) => {
                 <Link
                     onClick={() => setIsOpen(false)}
                     to='/searchByIngredient'
+                    reloadDocument
                     className='text-orange-500'
                 >Recipes by Ingredient</Link>
                 <button

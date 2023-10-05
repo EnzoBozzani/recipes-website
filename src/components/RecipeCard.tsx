@@ -7,7 +7,8 @@ interface props {
 
 export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
     return (
-        <div
+        <Link
+            to={`/${recipe.idMeal}`}
             className='flex flex-col justify-between w-full mx-8 md:mx-0 md:w-1/4 rounded-md hover:scale-105 hover:border-2   
             hover:border-orange-500 hover:border-solid transition duration-500 bg-white'>
             <img
@@ -15,13 +16,17 @@ export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
                 alt={recipe.strMeal}
                 className='rounded-t object-cover h-48 w-full'
             />
-            <p className='px-4 text-lg font-bold mt-4'>
+            <p className={`px-4 text-lg font-bold mt-4 ${recipe.strInstructions ? null : 'mb-6'}`}>
                 {recipe.strMeal}
             </p>
-            <p className='px-4 mb-4'>
-                {recipe.strInstructions.slice(0, 60)}...
-                <Link to={`/${recipe.idMeal}`} className='text-gray-500 italic underline'>Click here to see more</Link>
-            </p>
+            {
+                recipe.strInstructions ?
+                    <p className='px-4 mb-4'>
+                        {recipe.strInstructions.slice(0, 60)}...
+                        <span className='text-gray-500 italic'>Click here to see more</span>
+                    </p>
+                    : null
+            }
             <a
                 className='border-black bg-orange-500 mx-auto mb-4 text-gray-100 px-4 py-2 rounded hover:bg-orange-600 cursor-pointer'
                 href={recipe.strYoutube}
@@ -29,6 +34,6 @@ export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
             >
                 Recipe in YouTube
             </a>
-        </div>
+        </Link>
     )
 }
