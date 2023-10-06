@@ -10,7 +10,7 @@ export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
         <div
             className='flex flex-col justify-between w-full mx-8 md:mx-0 md:w-1/4 rounded-md hover:scale-105 hover:border-2   
             hover:border-orange-500 hover:border-solid transition duration-500 bg-white'>
-            <Link to={`/${recipe.idMeal}`}>
+            <Link to={`/recipes/${recipe.idMeal}`}>
                 <img
                     src={recipe.strMealThumb}
                     alt={recipe.strMeal}
@@ -24,7 +24,7 @@ export const RecipeCard: React.FC<props> = ({ recipe }: props) => {
                 recipe.strInstructions ?
                     <p className='px-4 mb-4'>
                         {recipe.strInstructions.slice(0, 60)}...
-                        <Link to={`/${recipe.idMeal}`} className='text-gray-500 italic'>Click here to see more</Link>
+                        <Link to={`/recipes/${recipe.idMeal}`} className='text-gray-500 italic'>Click here to see more</Link>
                     </p>
                     : null
             }

@@ -24,7 +24,7 @@ export const SuggestSection: React.FC<props> = ({ recipe }: props) => {
                 <span className='italic text-orange-500'>{recipe?.strMeal}</span>
             </p>
             <Link
-                to={`/${recipe?.idMeal}`}
+                to={`/recipes/${recipe?.idMeal}`}
                 className="flex justify-center border-black border-2 text-black bg-orange-500 ms-4 w-48 sm:ms-16 mt-16 px-2 py-1 sm:px-4 sm:py-2 rounded hover:bg-orange-600 cursor-pointer"
             >
                 Check it

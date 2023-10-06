@@ -13,10 +13,6 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: '/:recipeId',
-                element: <RecipePage />
-            },
-            {
                 path: 'searchByName',
                 element: <SearchByName />
             },
@@ -27,7 +23,11 @@ const router = createBrowserRouter([
             {
                 path: 'searchByIngredient',
                 element: <SearchByIngredient />
-            }
+            },
+            {
+                path: 'recipes/:recipeId',
+                element: <RecipePage />
+            },
         ]
     }
 ]);
